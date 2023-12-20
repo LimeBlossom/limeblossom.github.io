@@ -5,25 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Lime Blossom Studio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    /* Custom Styles */
+    body {
+      background-color: #bbe5f5; /* Background color */
+    }
+
+    .navbar {
+      background-color: #0fa74b; /* Lime color for navbar */
+    }
+
+    .navbar-brand img {
+      max-height: 40px; /* Adjust the max-height as needed */
+    }
+
+    .jumbotron {
+      background-color: #ecf3d2; /* Light lime color for jumbotron */
+      color: #0fa74b; /* Dark lime color for text */
+    }
+
+    section {
+      background-color: #b2d352; /* Dark lime color for section backgrounds */
+      color: #ffffff; /* White color for text in sections */
+    }
+
+    footer {
+      background-color: #e7e86a; /* Light blossom color for footer */
+      color: #0fa74b; /* Dark lime color for text in footer */
+    }
+  </style>
 </head>
 <body>
 
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Lime Blossom Studio</a>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">
+    <img src="logoSplashSquare_56px.png" alt="Lime Blossom Studio Logo">
+    Lime Blossom Studio
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#you-have-no-time">You Have No Time</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#chill-seekers">Chill Seekers</a>
-      </li>
-    </ul>
-  </div>
 </nav>
 
 <!-- Hero Section -->
@@ -34,16 +56,20 @@
 
 <!-- You Have No Time Section -->
 <section id="you-have-no-time" class="container mt-5">
-  <iframe src="https://store.steampowered.com/widget/2238360/" frameborder="0" width="646" height="190"></iframe>
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://store.steampowered.com/widget/2238360/" frameborder="0"></iframe>
+  </div>
 </section>
 
 <!-- Chill Seekers Section -->
 <section id="chill-seekers" class="container mt-5">
-  <iframe src="https://store.steampowered.com/widget/2587260/" frameborder="0" width="646" height="190"></iframe>
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://store.steampowered.com/widget/2587260/" frameborder="0"></iframe>
+  </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
+<footer class="text-white text-center py-3">
   <p>&copy; 2023 Lime Blossom Studio. All rights reserved.</p>
 </footer>
 
