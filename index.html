@@ -6,87 +6,235 @@
   <title>Lime Blossom Studio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <style>
-    /* Custom Styles */
     body {
-      background-color: #f8f9fa; /* Light gray background */
+      background-color: #f8f9fa;
     }
 
-    .navbar {
-      background-color: #007bff; /* Blue color for navbar */
-    }
-
-    .navbar-brand img {
-      max-height: 40px; /* Adjust the max-height as needed */
+    header {
+      background-color: #007bff;
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem;
     }
 
     .jumbotron {
-      background-color: #ffffff; /* White color for jumbotron background */
-      color: #343a40; /* Dark gray color for text */
+      background-color: #ffffff;
+      color: #343a40;
+      text-align: center;
+      padding: 2rem;
+      margin-bottom: 0;
     }
 
     section {
-      background-color: #f8f9fa; /* Light gray color for section backgrounds */
-      color: #343a40; /* Dark gray color for text in sections */
+      padding: 3rem 0;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .feature img {
+		width: 100%;
+		max-width: 300px;
+		height: 200px; /* Set a fixed height for all images */
+		object-fit: cover; /* Maintain aspect ratio and cover the container */
+		border-radius: 10px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+    .slideshow {
+      position: relative;
+      height: 100%; /* Set height for relative positioning */
+    }
+
+    .animate-scale {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .animate-scale:hover {
+      transform: scale(1.1);
     }
 
     footer {
-      background-color: #343a40; /* Dark gray color for footer */
-      color: #ffffff; /* White color for text in footer */
+      background-color: #343a40;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem;
     }
+	
+	.section-title {
+		text-align: center;
+	}
+	
+	.steam-list {
+		background-color: #aaaaaa;
+		width: 100%;
+	}
   </style>
 </head>
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">
-    <img src="logoSplashSquare_56px.png" alt="Lime Blossom Studio Logo">
-    Lime Blossom Studio
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#you-have-no-time">You Have No Time</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#chill-seekers">Chill Seekers</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<header>
+  <img src="logoSplashSquare_56px.png" alt="Lime Blossom Studio Logo">
+  <h1>Welcome to Lime Blossom Studio</h1>
+  <p>Indie game studio creating unique experiences</p>
+</header>
 
-<!-- Hero Section -->
 <div class="jumbotron">
-  <h1 class="display-4">Welcome to Lime Blossom Studio</h1>
-  <p class="lead">Indie game developer creating unique gaming experiences.</p>
+  <h2>Explore Our Games</h2>
+  <p>Immerse yourself in the games of Lime Blossom Studio and discover new ideas.</p>
 </div>
 
-<!-- You Have No Time Section -->
-<section id="you-have-no-time" class="container mt-5">
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://store.steampowered.com/widget/2238360/" frameborder="0"></iframe>
+<section class="container">
+  <h1 class="section-title">Games on Steam</h1>
+  <div class="row">
+    <div class="col-md-4 feature animate-scale">
+	<a href="https://store.steampowered.com/app/2238360/You_Have_No_Time/">
+      <div class="slideshow">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2238360/ss_51a56a671d0ca9494153f8b4471ea009392b7981.600x338.jpg?t=1701907300" alt="You Have No Time Screenshot 1">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2238360/ss_93ee1a036b3b677a1c9ee1dd83bde7a14dc9c527.600x338.jpg?t=1701907300" alt="You Have No Time Screenshot 2">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2238360/ss_fedab1129ad0cafa8100df37f711e195b15bb803.600x338.jpg?t=1701907300" alt="You Have No Time Screenshot 3">
+      </div>
+	  </a>
+      <h3>You Have No Time</h3>
+      <p>A fast paced puzzle game. First you solve the puzzle, then you optimize your route. Developed in 2 years with a team of 4.</p>
+    </div>
+    <div class="col-md-4 feature animate-scale">
+	<a href="https://store.steampowered.com/app/2587260/Chill_Seekers/">
+      <div class="slideshow">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2587260/ss_823150d7da84fe682304c98a51d031c9a85b891b.600x338.jpg?t=1698425376" alt="Chill Seekers Screenshot 1">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2587260/ss_08ed47119c913c379d97f3661600ebf045d38b66.600x338.jpg?t=1698425376" alt="Chill Seekers Screenshot 2">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2587260/ss_27a1b310452c1586ae4774153204d7e51f9c9200.600x338.jpg?t=1698425376" alt="Chill Seekers Screenshot 3">
+      </div>
+	  </a>
+      <h3>Chill Seekers</h3>
+      <p>A comfy puzzle game about leading penguins to safety. In development.</p>
+    </div>
+  </div>
+	
+  <h1 class="section-title">Streaming Tools</h1>
+  <div class="row">
+    <div class="col-md-4 feature animate-scale">
+      <a href="https://limeblossom-studio.itch.io/twitch-bits-overlay">
+        <div class="slideshow">
+          <img src="https://img.itch.zone/aW1hZ2UvMTAzNDM5NS81OTA0NDgzLmpwZw==/347x500/JYbPWk.jpg" alt="Make It Rain Image 1">
+          <img src="https://img.itch.zone/aW1hZ2UvMTAzNDM5NS81OTMxOTc0LmpwZw==/347x500/b7cbRh.jpg" alt="Make It Rain Image 2">
+        </div>
+      </a>
+      <h3>Make It Rain</h3>
+      <p>Transparent overlay for Twitch chat donations. Coins rain down on your screen with each bit donation!</p>
+    </div>
+    <div class="col-md-4 feature animate-scale">
+      <a href="https://limeblossom-studio.itch.io/stream-ink">
+        <div class="slideshow">
+          <img src="https://img.itch.zone/aW1hZ2UvMTA0NTAyMi81OTcxNzQzLmpwZw==/347x500/qkwC%2Fd.jpg" alt="Stream Ink Image 1">
+        </div>
+      </a>
+      <h3>Stream Ink</h3>
+      <p>Allow your viewers to cover your screen in colorful ink for interactive Twitch streaming fun!</p>
+    </div>
+    <div class="col-md-4 feature animate-scale">
+      <a href="https://limeblossom-studio.itch.io/crab-rave-overlay">
+        <div class="slideshow">
+          <img src="https://img.itch.zone/aW1hZ2UvMTA1OTE2MS82MDc2MzEyLmpwZw==/347x500/%2F5Z8jB.jpg" alt="Crab Rave Overlay Image 1">
+        </div>
+      </a>
+      <h3>Crab Rave Overlay</h3>
+      <p>Add excitement to your stream with raving crabs that bounce around on your screen!</p>
+    </div>
+  </div>
+  
+  <h1 class="section-title">Game Jams</h1>
+  <div class="row">
+    <div class="col-md-4 feature animate-scale">
+      <a href="https://limeblossomjams.itch.io/stocking-stuffer">
+        <div class="slideshow">
+          <img src="https://img.itch.zone/aW1nLzEwNjkwMjkyLnBuZw==/315x250%23c/JfiH1a.png" alt="Stocking Stuffer Image 1">
+        </div>
+      </a>
+      <h3>Stocking Stuffer</h3>
+      <p>A Christmas themed matching game. An experiment in physics based matching games. Made in 48 hours.</p>
+    </div>
+    <div class="col-md-4 feature animate-scale">
+      <a href="https://limeblossomjams.itch.io/tiny-bot-apocalypse">
+        <div class="slideshow">
+          <img src="https://img.itch.zone/aW1nLzEzMTgzMzU1LnBuZw==/315x250%23c/NKPkdx.png" alt="Tiny Bot Apocalypse Image 1">
+        </div>
+      </a>
+      <h3>Tiny Bot Apocalypse</h3>
+      <p>A 3rd person shooter. Dash around the destroyed city as waves of monsters attack. Made in 48 hours.</p>
+    </div>
+    <div class="col-md-4 feature animate-scale">
+      <a href="https://limeblossomjams.itch.io/bit-boarding">
+        <div class="slideshow">
+          <img src="https://img.itch.zone/aW1hZ2UvOTU4OTEvNDQ5MDQ0LnBuZw==/315x250%23c/44Gwtr.png" alt="Bit Boarding Image 1">
+        </div>
+      </a>
+      <h3>Bit Boarding</h3>
+      <p>A hoverboarding experience for PC VR. Bend your knees and shift your weight to control your board. Made in 48 hours with a team of 4.</p>
+    </div>
+	<div class="col-md-4 feature animate-scale">
+      <a href="https://limeblossomjams.itch.io/the-monsters-norm">
+        <div class="slideshow">
+          <img src="https://img.itch.zone/aW1hZ2UvMTE3MzE3LzU0MjIxNC5qcGc=/315x250%23c/I%2F4Cwj.jpg" alt="Monster's Norm Image 1">
+        </div>
+      </a>
+      <h3>The Monster's Norm</h3>
+      <p>An experiment in making the player revolted with their own actions, this PC VR game was made in 48 hours with a team of 4.</p>
+    </div>
+	<div class="col-md-4 feature animate-scale">
+      <a href="https://limeblossomjams.itch.io/deep-trouble">
+        <div class="slideshow">
+          <img src="https://img.itch.zone/aW1hZ2UvMTkxMTc0Lzg5NDkxMS5qcGc=/315x250%23c/mIqwjL.jpg" alt="Deep Trouble Image 1">
+        </div>
+      </a>
+      <h3>Deep Trouble</h3>
+      <p>A mobile/web game that preaches about the morality of shark fin soup. Made in 48 hours with a team of 4.</p>
+    </div>
   </div>
 </section>
 
-<!-- Chill Seekers Section -->
-<section id="chill-seekers" class="container mt-5">
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://store.steampowered.com/widget/2587260/" frameborder="0"></iframe>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="text-white text-center py-3">
+<footer>
   <p>&copy; 2023 Lime Blossom Studio. All rights reserved.</p>
 </footer>
 
-<!-- Bootstrap JavaScript dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slideshows = document.querySelectorAll('.slideshow');
+    slideshows.forEach((slideshow) => {
+      let currentIndex = 0;
+      const images = Array.from(slideshow.children);
+      
+      // Show the first image by default
+      images[currentIndex].style.opacity = 1;
+
+      function showImage(index) {
+        const containerHeight = images[index].offsetHeight;
+        slideshow.style.height = containerHeight + 'px';
+        images.forEach((img, i) => {
+          img.style.opacity = i === index ? 1 : 0;
+        });
+      }
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }
+
+      nextImage();
+      setInterval(nextImage, 3000); // Change image every 3 seconds
+    });
+  });
+</script>
 
 </body>
 </html>
