@@ -20,10 +20,9 @@
       }
 
     header {
-      background-color: #007bff;
       color: #ffffff;
       text-align: center;
-      padding: 2rem;
+      padding: 2rem;;
     }
 
     .jumbotron {
@@ -88,17 +87,21 @@
 		background-color: #aaaaaa;
 		width: 100%;
 	}
+    .background-canvas{
+        z-index: -1;
+        position: fixed
+    }
   </style>
 </head>
 <body onmousemove="coordinate(event)">
-    <canvas id="experiment" width="100" height="100" z-index="-1" position="fixed"></canvas>
+    <canvas id="experiment" width="100" height="100" class="background-canvas"></canvas>
     <script src="limeBlossoms.js"></script>
 
 
     <header>
         <img src="logoSplashSquare_56px.png" alt="Lime Blossom Studio Logo">
         <h1>Lime Blossom Studio</h1>
-        <p>A small studio making small experiences</p>
+        <p>Puzzles for the people</p>
     </header>
 
     <section class="container">
