@@ -15,9 +15,9 @@
   <title>Lime Blossom Studio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <style>
-    body {
-      background-color: #f8f9fa;
-    }
+      body {
+          background-color: powderblue;
+      }
 
     header {
       background-color: #007bff;
@@ -90,211 +90,214 @@
 	}
   </style>
 </head>
-<body>
+<body onmousemove="coordinate(event)">
+    <canvas id="experiment" width="100" height="100" z-index="-1"></canvas>
+    <script src="limeBlossoms.js" position="relative"></script>
 
-<header>
-  <img src="logoSplashSquare_56px.png" alt="Lime Blossom Studio Logo">
-  <h1>Lime Blossom Studio</h1>
-  <p>A small studio making small experiences</p>
-</header>
 
-<section class="container">
-  <h1 class="section-title">Games on Steam</h1>
-  <div class="row">
-    <div class="col-md-4 feature animate-scale">
-	<a href="https://store.steampowered.com/app/2238360/You_Have_No_Time/">
-      <div class="slideshow">
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2238360/ss_51a56a671d0ca9494153f8b4471ea009392b7981.600x338.jpg?t=1701907300" alt="You Have No Time Screenshot 1">
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2238360/ss_93ee1a036b3b677a1c9ee1dd83bde7a14dc9c527.600x338.jpg?t=1701907300" alt="You Have No Time Screenshot 2">
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2238360/ss_fedab1129ad0cafa8100df37f711e195b15bb803.600x338.jpg?t=1701907300" alt="You Have No Time Screenshot 3">
-      </div>
-	  </a>
-      <h3>You Have No Time</h3>
-      <p>A fast paced puzzle game. First you solve the puzzle, then you optimize your route. Developed in 2 years with a team of 4. 2023.</p>
-    </div>
-    <div class="col-md-4 feature animate-scale">
-	<a href="https://store.steampowered.com/app/2587260/Chill_Seekers/">
-      <div class="slideshow">
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2587260/ss_823150d7da84fe682304c98a51d031c9a85b891b.600x338.jpg?t=1698425376" alt="Chill Seekers Screenshot 1">
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2587260/ss_08ed47119c913c379d97f3661600ebf045d38b66.600x338.jpg?t=1698425376" alt="Chill Seekers Screenshot 2">
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2587260/ss_27a1b310452c1586ae4774153204d7e51f9c9200.600x338.jpg?t=1698425376" alt="Chill Seekers Screenshot 3">
-      </div>
-	  </a>
-      <h3>Chill Seekers</h3>
-      <p>A comfy puzzle game about leading penguins to safety. In development. 2024.</p>
-    </div>
-  </div>
-	
-  <h1 class="section-title">Streaming Tools</h1>
-  <div class="row">
-    <div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossom-studio.itch.io/twitch-bits-overlay">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1hZ2UvMTAzNDM5NS81OTA0NDgzLmpwZw==/347x500/JYbPWk.jpg" alt="Make It Rain Image 1">
-          <img src="https://img.itch.zone/aW1hZ2UvMTAzNDM5NS81OTMxOTc0LmpwZw==/347x500/b7cbRh.jpg" alt="Make It Rain Image 2">
-        </div>
-      </a>
-      <h3>Make It Rain</h3>
-      <p>Transparent overlay for Twitch chat donations. Coins rain down on your screen with each bit donation!</p>
-    </div>
-    <div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossom-studio.itch.io/stream-ink">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1hZ2UvMTA0NTAyMi81OTcxNzQzLmpwZw==/347x500/qkwC%2Fd.jpg" alt="Stream Ink Image 1">
-        </div>
-      </a>
-      <h3>Stream Ink</h3>
-      <p>Allow your viewers to cover your screen in colorful ink for interactive Twitch streaming fun!</p>
-    </div>
-    <div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossom-studio.itch.io/crab-rave-overlay">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1hZ2UvMTA1OTE2MS82MDc2MzEyLmpwZw==/347x500/%2F5Z8jB.jpg" alt="Crab Rave Overlay Image 1">
-        </div>
-      </a>
-      <h3>Crab Rave Overlay</h3>
-      <p>Add excitement to your stream with raving crabs that bounce around on your screen!</p>
-    </div>
-  </div>
-  
-  <h1 class="section-title">Game Jams</h1>
-  <div class="row">
-    <div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossomjams.itch.io/whenever-the-door-opens">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1hZ2UvMjUzNTU0MC8xNTA4Mzg3OC5wbmc=/original/0dr%2Frg.png" alt="WhenDoor Image 1">
-	  <img src="https://img.itch.zone/aW1hZ2UvMjUzNTU0MC8xNTA4NTM2My5wbmc=/original/h4EbUz.png" alt="WhenDoor Image 2">
-          <img src="https://img.itch.zone/aW1hZ2UvMjUzNTU0MC8xNTA4MzMwNy5wbmc=/original/wK%2FJ1g.png" alt="WhenDoor Image 3">
-        </div>
-      </a>
-      <h3>Whenever; The Door Opens</h3>
-      <p>An experiment in designing/developing deckbuilding games. Made in 7 days with a team of 3. 2024.</p>
-    </div>
-    <div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossomjams.itch.io/stocking-stuffer">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1nLzEwNjkwMjkyLnBuZw==/315x250%23c/JfiH1a.png" alt="Stocking Stuffer Image 1">
-        </div>
-      </a>
-      <h3>Stocking Stuffer</h3>
-      <p>A Christmas themed matching game. An experiment in physics based matching games. Made in 48 hours. 2022.</p>
-    </div>
-    <div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossomjams.itch.io/tiny-bot-apocalypse">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1nLzEzMTgzMzU1LnBuZw==/315x250%23c/NKPkdx.png" alt="Tiny Bot Apocalypse Image 1">
-        </div>
-      </a>
-      <h3>Tiny Bot Apocalypse</h3>
-      <p>A 3rd person shooter. Dash around the destroyed city as waves of monsters attack. Made in 48 hours. 2023.</p>
-    </div>
-    <div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossomjams.itch.io/bit-boarding">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1hZ2UvOTU4OTEvNDQ5MDQ0LnBuZw==/315x250%23c/44Gwtr.png" alt="Bit Boarding Image 1">
-        </div>
-      </a>
-      <h3>Bit Boarding</h3>
-      <p>A hoverboarding experience for PC VR. Bend your knees and shift your weight to control your board. Made in 48 hours with a team of 4. 2016.</p>
-    </div>
-	<div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossomjams.itch.io/the-monsters-norm">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1hZ2UvMTE3MzE3LzU0MjIxNC5qcGc=/315x250%23c/I%2F4Cwj.jpg" alt="Monster's Norm Image 1">
-        </div>
-      </a>
-      <h3>The Monster's Norm</h3>
-      <p>An experiment in making the player revolted with their own actions, this PC VR game was made in 48 hours with a team of 4. 2017.</p>
-    </div>
-	<div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossomjams.itch.io/deep-trouble">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1hZ2UvMTkxMTc0Lzg5NDkxMS5qcGc=/315x250%23c/mIqwjL.jpg" alt="Deep Trouble Image 1">
-          <img src="https://img.itch.zone/aW1hZ2UvMTkxMTc0Lzg5NDkyNC5wbmc=/347x500/oqVMvF.png" alt="Deep Trouble Image 2">
-        </div>
-      </a>
-      <h3>Deep Trouble</h3>
-      <p>A mobile/web game that preaches about the morality of shark fin soup. Made in 48 hours with a team of 6. 2017.</p>
-    </div>
-	<div class="col-md-4 feature animate-scale">
-      <a href="https://firestudios.itch.io/neurant">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1nLzczMzgzMjAucG5n/315x250%23c/V5kdK2.png" alt="Neurant Image 1">
-		  <img src="https://img.itch.zone/aW1hZ2UvMTI1OTMxNi83MzM4NTc1LnBuZw==/347x500/kjCbp9.png" alt="Neurant Image 2">
-		  <img src="https://img.itch.zone/aW1hZ2UvMTI1OTMxNi83MzM4NjY5LnBuZw==/347x500/1Sp8Sd.png" alt="Neurant Image 3">
-		  <img src="https://img.itch.zone/aW1hZ2UvMTI1OTMxNi83MzM4NTc2LnBuZw==/347x500/ikUXpB.png" alt="Neurant Image 4">
-        </div>
-      </a>
-      <h3>Neurant</h3>
-      <p>A twin-stick shooter about coping with death. Made in 48 hours with a team of 6. 2021.</p>
-    </div>
-	<div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossomjams.itch.io/scrambo">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1hZ2UvMTIyNzc5LzU2NTU4OC5wbmc=/315x250%23c/BFQJsV.png" alt="Scrambo Image 1">
-        </div>
-      </a>
-      <h3>Scrambo</h3>
-      <p>An arcade side scrolling shooter about a super soldier with anxiety. Made in 72 hours without internet with a team of 4. 2017.</p>
-    </div>
-	<div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossomjams.itch.io/chaos-rocks">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1nLzY4NDk3NjAucG5n/315x250%23c/xG0uP1.png" alt="Chaos Rocks Image 1">
-		  <img src="https://img.itch.zone/aW1hZ2UvMTE3NjQwNi82ODU0NTMyLnBuZw==/347x500/QfdkHJ.png" alt="Chaos Rocks Image 2">
-		  <img src="https://img.itch.zone/aW1hZ2UvMTE3NjQwNi82ODU0NTM0LnBuZw==/347x500/1fPrxL.png" alt="Chaos Rocks Image 3">
-        </div>
-      </a>
-      <h3>Chaos Rocks</h3>
-      <p>A simple 2D platformer prototype. Made in 48 hours. 2021</p>
-    </div>
-	<div class="col-md-4 feature animate-scale">
-      <a href="https://limeblossomjams.itch.io/dont-get-spiked">
-        <div class="slideshow">
-          <img src="https://img.itch.zone/aW1nLzY5MTI4NDgucG5n/315x250%23c/7KyhB6.png" alt="Chaos Rocks Image 1">
-        </div>
-      </a>
-      <h3>Don't Get Spiked!</h3>
-      <p>A simple arcade game that experimented with grappling hook mechanics. Made in 48 hours. 2021</p>
-    </div>
-  </div>
-</section>
+    <header>
+        <img src="logoSplashSquare_56px.png" alt="Lime Blossom Studio Logo">
+        <h1>Lime Blossom Studio</h1>
+        <p>A small studio making small experiences</p>
+    </header>
 
-<footer>
-  <p>&copy; 2023 Lime Blossom Studio. All rights reserved.</p>
-</footer>
+    <section class="container">
+        <h1 class="section-title">Games on Steam</h1>
+        <div class="row">
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://store.steampowered.com/app/2238360/You_Have_No_Time/">
+                    <div class="slideshow">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2238360/ss_51a56a671d0ca9494153f8b4471ea009392b7981.600x338.jpg?t=1701907300" alt="You Have No Time Screenshot 1">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2238360/ss_93ee1a036b3b677a1c9ee1dd83bde7a14dc9c527.600x338.jpg?t=1701907300" alt="You Have No Time Screenshot 2">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2238360/ss_fedab1129ad0cafa8100df37f711e195b15bb803.600x338.jpg?t=1701907300" alt="You Have No Time Screenshot 3">
+                    </div>
+                </a>
+                <h3>You Have No Time</h3>
+                <p>A fast paced puzzle game. First you solve the puzzle, then you optimize your route. Developed in 2 years with a team of 4. 2023.</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://store.steampowered.com/app/2587260/Chill_Seekers/">
+                    <div class="slideshow">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2587260/ss_823150d7da84fe682304c98a51d031c9a85b891b.600x338.jpg?t=1698425376" alt="Chill Seekers Screenshot 1">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2587260/ss_08ed47119c913c379d97f3661600ebf045d38b66.600x338.jpg?t=1698425376" alt="Chill Seekers Screenshot 2">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/2587260/ss_27a1b310452c1586ae4774153204d7e51f9c9200.600x338.jpg?t=1698425376" alt="Chill Seekers Screenshot 3">
+                    </div>
+                </a>
+                <h3>Chill Seekers</h3>
+                <p>A comfy puzzle game about leading penguins to safety. In development. 2024.</p>
+            </div>
+        </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const slideshows = document.querySelectorAll('.slideshow');
-    slideshows.forEach((slideshow) => {
-      let currentIndex = 0;
-      const images = Array.from(slideshow.children);
-      
-      // Show the first image by default
-      images[currentIndex].style.opacity = 1;
+        <h1 class="section-title">Streaming Tools</h1>
+        <div class="row">
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossom-studio.itch.io/twitch-bits-overlay">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTAzNDM5NS81OTA0NDgzLmpwZw==/347x500/JYbPWk.jpg" alt="Make It Rain Image 1">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTAzNDM5NS81OTMxOTc0LmpwZw==/347x500/b7cbRh.jpg" alt="Make It Rain Image 2">
+                    </div>
+                </a>
+                <h3>Make It Rain</h3>
+                <p>Transparent overlay for Twitch chat donations. Coins rain down on your screen with each bit donation!</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossom-studio.itch.io/stream-ink">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTA0NTAyMi81OTcxNzQzLmpwZw==/347x500/qkwC%2Fd.jpg" alt="Stream Ink Image 1">
+                    </div>
+                </a>
+                <h3>Stream Ink</h3>
+                <p>Allow your viewers to cover your screen in colorful ink for interactive Twitch streaming fun!</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossom-studio.itch.io/crab-rave-overlay">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTA1OTE2MS82MDc2MzEyLmpwZw==/347x500/%2F5Z8jB.jpg" alt="Crab Rave Overlay Image 1">
+                    </div>
+                </a>
+                <h3>Crab Rave Overlay</h3>
+                <p>Add excitement to your stream with raving crabs that bounce around on your screen!</p>
+            </div>
+        </div>
 
-      function showImage(index) {
-        const containerHeight = images[index].offsetHeight;
-        slideshow.style.height = containerHeight + 'px';
-        images.forEach((img, i) => {
-          img.style.opacity = i === index ? 1 : 0;
+        <h1 class="section-title">Game Jams</h1>
+        <div class="row">
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossomjams.itch.io/whenever-the-door-opens">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1hZ2UvMjUzNTU0MC8xNTA4Mzg3OC5wbmc=/original/0dr%2Frg.png" alt="WhenDoor Image 1">
+                        <img src="https://img.itch.zone/aW1hZ2UvMjUzNTU0MC8xNTA4NTM2My5wbmc=/original/h4EbUz.png" alt="WhenDoor Image 2">
+                        <img src="https://img.itch.zone/aW1hZ2UvMjUzNTU0MC8xNTA4MzMwNy5wbmc=/original/wK%2FJ1g.png" alt="WhenDoor Image 3">
+                    </div>
+                </a>
+                <h3>Whenever; The Door Opens</h3>
+                <p>An experiment in designing/developing deckbuilding games. Made in 7 days with a team of 3. 2024.</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossomjams.itch.io/stocking-stuffer">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1nLzEwNjkwMjkyLnBuZw==/315x250%23c/JfiH1a.png" alt="Stocking Stuffer Image 1">
+                    </div>
+                </a>
+                <h3>Stocking Stuffer</h3>
+                <p>A Christmas themed matching game. An experiment in physics based matching games. Made in 48 hours. 2022.</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossomjams.itch.io/tiny-bot-apocalypse">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1nLzEzMTgzMzU1LnBuZw==/315x250%23c/NKPkdx.png" alt="Tiny Bot Apocalypse Image 1">
+                    </div>
+                </a>
+                <h3>Tiny Bot Apocalypse</h3>
+                <p>A 3rd person shooter. Dash around the destroyed city as waves of monsters attack. Made in 48 hours. 2023.</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossomjams.itch.io/bit-boarding">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1hZ2UvOTU4OTEvNDQ5MDQ0LnBuZw==/315x250%23c/44Gwtr.png" alt="Bit Boarding Image 1">
+                    </div>
+                </a>
+                <h3>Bit Boarding</h3>
+                <p>A hoverboarding experience for PC VR. Bend your knees and shift your weight to control your board. Made in 48 hours with a team of 4. 2016.</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossomjams.itch.io/the-monsters-norm">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTE3MzE3LzU0MjIxNC5qcGc=/315x250%23c/I%2F4Cwj.jpg" alt="Monster's Norm Image 1">
+                    </div>
+                </a>
+                <h3>The Monster's Norm</h3>
+                <p>An experiment in making the player revolted with their own actions, this PC VR game was made in 48 hours with a team of 4. 2017.</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossomjams.itch.io/deep-trouble">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTkxMTc0Lzg5NDkxMS5qcGc=/315x250%23c/mIqwjL.jpg" alt="Deep Trouble Image 1">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTkxMTc0Lzg5NDkyNC5wbmc=/347x500/oqVMvF.png" alt="Deep Trouble Image 2">
+                    </div>
+                </a>
+                <h3>Deep Trouble</h3>
+                <p>A mobile/web game that preaches about the morality of shark fin soup. Made in 48 hours with a team of 6. 2017.</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://firestudios.itch.io/neurant">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1nLzczMzgzMjAucG5n/315x250%23c/V5kdK2.png" alt="Neurant Image 1">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTI1OTMxNi83MzM4NTc1LnBuZw==/347x500/kjCbp9.png" alt="Neurant Image 2">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTI1OTMxNi83MzM4NjY5LnBuZw==/347x500/1Sp8Sd.png" alt="Neurant Image 3">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTI1OTMxNi83MzM4NTc2LnBuZw==/347x500/ikUXpB.png" alt="Neurant Image 4">
+                    </div>
+                </a>
+                <h3>Neurant</h3>
+                <p>A twin-stick shooter about coping with death. Made in 48 hours with a team of 6. 2021.</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossomjams.itch.io/scrambo">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTIyNzc5LzU2NTU4OC5wbmc=/315x250%23c/BFQJsV.png" alt="Scrambo Image 1">
+                    </div>
+                </a>
+                <h3>Scrambo</h3>
+                <p>An arcade side scrolling shooter about a super soldier with anxiety. Made in 72 hours without internet with a team of 4. 2017.</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossomjams.itch.io/chaos-rocks">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1nLzY4NDk3NjAucG5n/315x250%23c/xG0uP1.png" alt="Chaos Rocks Image 1">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTE3NjQwNi82ODU0NTMyLnBuZw==/347x500/QfdkHJ.png" alt="Chaos Rocks Image 2">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTE3NjQwNi82ODU0NTM0LnBuZw==/347x500/1fPrxL.png" alt="Chaos Rocks Image 3">
+                    </div>
+                </a>
+                <h3>Chaos Rocks</h3>
+                <p>A simple 2D platformer prototype. Made in 48 hours. 2021</p>
+            </div>
+            <div class="col-md-4 feature animate-scale">
+                <a href="https://limeblossomjams.itch.io/dont-get-spiked">
+                    <div class="slideshow">
+                        <img src="https://img.itch.zone/aW1nLzY5MTI4NDgucG5n/315x250%23c/7KyhB6.png" alt="Chaos Rocks Image 1">
+                    </div>
+                </a>
+                <h3>Don't Get Spiked!</h3>
+                <p>A simple arcade game that experimented with grappling hook mechanics. Made in 48 hours. 2021</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Lime Blossom Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slideshows = document.querySelectorAll('.slideshow');
+            slideshows.forEach((slideshow) => {
+                let currentIndex = 0;
+                const images = Array.from(slideshow.children);
+
+                // Show the first image by default
+                images[currentIndex].style.opacity = 1;
+
+                function showImage(index) {
+                    const containerHeight = images[index].offsetHeight;
+                    slideshow.style.height = containerHeight + 'px';
+                    images.forEach((img, i) => {
+                        img.style.opacity = i === index ? 1 : 0;
+                    });
+                }
+
+                function nextImage() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    showImage(currentIndex);
+                }
+
+                nextImage();
+                setInterval(nextImage, 3000); // Change image every 3 seconds
+            });
         });
-      }
-
-      function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-      }
-
-      nextImage();
-      setInterval(nextImage, 3000); // Change image every 3 seconds
-    });
-  });
-</script>
+    </script>
 
 </body>
 </html>
