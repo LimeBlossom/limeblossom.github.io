@@ -34,7 +34,8 @@ function animate() {
         ctx.drawImage(petals[i].image, petals[i].x, petals[i].y, 12, 12);
         petals[i].x += 0.7 + Math.sin(Date.now() / 800) + Math.sin((Date.now() * petals[i].xMult) / 800);
         petals[i].y += ((Math.sin(Date.now()) + 0.7) / 3) * petals[i].yMult;
-        //pushPetal(petals[i]);
+        // Push petals away from mouse
+		//pushPetal(petals[i]);
         if (petals[i].x > ctx.canvas.width || petals[i].y > ctx.canvas.height) {
             petals[i].x = (Math.random() * ctx.canvas.width * 1.5) - (ctx.canvas.width * 0.5);
             petals[i].y = -10;
